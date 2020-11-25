@@ -92,11 +92,10 @@ where
         }
     }
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct S2 {
-    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize], u8>,
-    pub __bindgen_padding_0: u8,
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 2usize], u8>,
 }
 #[test]
 fn bindgen_test_layout_S2() {
@@ -113,9 +112,9 @@ fn bindgen_test_layout_S2() {
 }
 impl S2 {
     #[inline]
-    pub fn new_bitfield_1() -> __BindgenBitfieldUnit<[u8; 1usize], u8> {
+    pub fn new_bitfield_1() -> __BindgenBitfieldUnit<[u8; 2usize], u8> {
         let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<
-            [u8; 1usize],
+            [u8; 2usize],
             u8,
         > = Default::default();
         __bindgen_bitfield_unit

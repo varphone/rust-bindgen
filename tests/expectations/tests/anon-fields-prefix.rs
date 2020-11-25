@@ -5,7 +5,7 @@
     non_upper_case_globals
 )]
 
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy, Clone)]
 pub union color {
     pub u1: color__bindgen_ty_1,
@@ -13,7 +13,7 @@ pub union color {
     pub v3: [::std::os::raw::c_uchar; 3usize],
     _bindgen_union_align: [u8; 3usize],
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct color__bindgen_ty_1 {
     pub r: ::std::os::raw::c_uchar,
@@ -72,7 +72,7 @@ fn bindgen_test_layout_color__bindgen_ty_1() {
         )
     );
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct color__bindgen_ty_2 {
     pub y: ::std::os::raw::c_uchar,

@@ -9,7 +9,7 @@
 pub mod root {
     #[allow(unused_imports)]
     use self::super::root;
-    #[repr(C)]
+    #[repr(C, packed)]
     #[derive(Debug, Default, Copy, Clone)]
     pub struct Test {
         pub _address: u8,

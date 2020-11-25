@@ -8,7 +8,7 @@
 extern "C" {
     pub fn foo();
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct Foo {
     pub _address: u8,

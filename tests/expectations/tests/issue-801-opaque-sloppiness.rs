@@ -33,7 +33,7 @@ extern "C" {
     #[link_name = "\u{1}_ZN1B1aE"]
     pub static mut B_a: A;
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct C {
     pub b: B,

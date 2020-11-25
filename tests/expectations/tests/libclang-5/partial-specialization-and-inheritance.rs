@@ -15,7 +15,7 @@ pub struct Base {
 pub struct Derived {
     pub b: bool,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct Usage {
     pub _address: u8,

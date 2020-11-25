@@ -10,7 +10,7 @@
 pub struct Outer {
     pub i: u8,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct AutoIdVector {
     pub ar: Outer,

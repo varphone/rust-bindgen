@@ -6,7 +6,7 @@
 )]
 
 pub const __: ::std::os::raw::c_int = 10;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct ptr_t {
     pub __: [::std::os::raw::c_uchar; 8usize],

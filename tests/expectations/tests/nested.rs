@@ -28,7 +28,7 @@ fn bindgen_test_layout_Calc() {
         concat!("Offset of field: ", stringify!(Calc), "::", stringify!(w))
     );
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct Test {
     pub _address: u8,

@@ -5,7 +5,7 @@
     non_upper_case_globals
 )]
 
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default)]
 pub struct cv_String {
     pub _address: u8,

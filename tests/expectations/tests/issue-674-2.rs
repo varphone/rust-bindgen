@@ -19,7 +19,7 @@ pub mod root {
         }
         pub type Rooted_ElementType<T> = T;
     }
-    #[repr(C)]
+    #[repr(C, packed)]
     #[derive(Debug, Default, Copy, Clone)]
     pub struct c {
         pub b: u8,
@@ -42,7 +42,7 @@ pub mod root {
             concat!("Offset of field: ", stringify!(c), "::", stringify!(b))
         );
     }
-    #[repr(C)]
+    #[repr(C, packed)]
     #[derive(Debug, Default, Copy, Clone)]
     pub struct B {
         pub a: root::c,

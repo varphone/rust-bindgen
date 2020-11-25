@@ -9,7 +9,7 @@ extern "C" {
 pub type Char = ::std::os::raw::c_char;
 pub type SChar = ::std::os::raw::c_schar;
 pub type UChar = ::std::os::raw::c_uchar;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Copy, Clone)]
 pub struct Test {
     pub ch: ::std::os::raw::c_char,

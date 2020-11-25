@@ -5,7 +5,7 @@
     non_upper_case_globals
 )]
 
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct Foo_empty {
     pub _address: u8,

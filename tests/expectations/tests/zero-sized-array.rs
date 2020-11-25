@@ -36,7 +36,7 @@ impl<T> ::std::fmt::Debug for __IncompleteArrayField<T> {
     }
 }
 /// Bizarrely enough, this should *not* get an `_address` field.
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default)]
 pub struct ZeroSizedArray {
     pub arr: __IncompleteArrayField<::std::os::raw::c_char>,
@@ -67,7 +67,7 @@ fn bindgen_test_layout_ZeroSizedArray() {
     );
 }
 /// And nor should this get an `_address` field.
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default)]
 pub struct ContainsZeroSizedArray {
     pub zsa: ZeroSizedArray,
@@ -100,7 +100,7 @@ fn bindgen_test_layout_ContainsZeroSizedArray() {
 }
 /// Inheriting from ZeroSizedArray shouldn't cause an `_address` to be inserted
 /// either.
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default)]
 pub struct InheritsZeroSizedArray {
     pub _base: ZeroSizedArray,
@@ -119,7 +119,7 @@ fn bindgen_test_layout_InheritsZeroSizedArray() {
     );
 }
 /// And this should not get an `_address` field either.
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default)]
 pub struct DynamicallySizedArray {
     pub arr: __IncompleteArrayField<::std::os::raw::c_char>,
@@ -138,7 +138,7 @@ fn bindgen_test_layout_DynamicallySizedArray() {
     );
 }
 /// No `_address` field here either.
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default)]
 pub struct ContainsDynamicallySizedArray {
     pub dsa: DynamicallySizedArray,

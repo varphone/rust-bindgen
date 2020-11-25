@@ -1247,6 +1247,10 @@ impl CompInfo {
                 _ => false,
             });
 
+        // Force set packed layout if ty.align == 1.
+        // There may be other better methods, but this can solve most problems.
+        ci.packed_attr = ty.align(ctx) == 1;
+
         let mut maybe_anonymous_struct_field = None;
         cursor.visit(|cur| {
             if cur.kind() != CXCursor_FieldDecl {

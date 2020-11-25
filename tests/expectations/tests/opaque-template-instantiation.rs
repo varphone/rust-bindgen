@@ -16,7 +16,7 @@ impl<T> Default for Template<T> {
         unsafe { ::std::mem::zeroed() }
     }
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct ContainsInstantiation {
     pub not_opaque: Template<::std::os::raw::c_char>,

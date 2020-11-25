@@ -21,7 +21,7 @@ pub mod root {
             pub fn NamespacedFunction();
         }
     }
-    #[repr(C)]
+    #[repr(C, packed)]
     #[derive(Debug, Default, Copy, Clone)]
     pub struct C {
         pub _address: u8,

@@ -10,7 +10,7 @@
 pub struct a {
     pub _address: u8,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct _bindgen_ty_1 {
     pub ar: a,

@@ -9,7 +9,7 @@ pub struct BlacklistMe(u8);
 
 /// Because this type contains a blacklisted type, it should not derive
 /// PartialEq.
-#[repr(C)]
+#[repr(C, packed)]
 pub struct ShouldNotDerivePartialEq {
     pub a: BlacklistMe,
 }

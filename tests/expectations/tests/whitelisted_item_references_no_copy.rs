@@ -5,7 +5,7 @@
     non_upper_case_globals
 )]
 
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default)]
 pub struct NoCopy {
     pub _address: u8,
@@ -23,7 +23,7 @@ fn bindgen_test_layout_NoCopy() {
         concat!("Alignment of ", stringify!(NoCopy))
     );
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default)]
 pub struct WhitelistMe {
     pub a: NoCopy,

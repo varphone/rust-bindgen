@@ -48,7 +48,7 @@ impl<T> ::std::cmp::PartialEq for __BindgenUnionField<T> {
     }
 }
 impl<T> ::std::cmp::Eq for __BindgenUnionField<T> {}
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Hash, PartialEq, Eq)]
 pub struct mozilla_FragmentOrURL {
     pub mIsLocalRef: bool,
@@ -84,7 +84,7 @@ impl Clone for mozilla_FragmentOrURL {
         *self
     }
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Hash, PartialEq, Eq)]
 pub struct mozilla_Position {
     pub _address: u8,

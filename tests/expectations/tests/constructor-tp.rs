@@ -10,7 +10,7 @@
 pub struct Foo {
     pub _address: u8,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct Bar {
     pub _address: u8,

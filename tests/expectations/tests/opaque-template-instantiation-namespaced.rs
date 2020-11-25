@@ -24,7 +24,7 @@ pub mod root {
                 unsafe { ::std::mem::zeroed() }
             }
         }
-        #[repr(C)]
+        #[repr(C, packed)]
         #[derive(Debug, Default, Copy, Clone, Hash, PartialEq, Eq)]
         pub struct Foo {
             pub c: ::std::os::raw::c_char,
@@ -84,7 +84,7 @@ pub mod root {
                 )
             );
         }
-        #[repr(C)]
+        #[repr(C, packed)]
         #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
         pub struct ContainsInstantiation {
             pub not_opaque: root::zoidberg::Template<root::zoidberg::Foo>,

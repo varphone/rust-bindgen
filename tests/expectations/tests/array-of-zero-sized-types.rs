@@ -6,7 +6,7 @@
 )]
 
 /// This should get an `_address` byte.
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct Empty {
     pub _address: u8,
@@ -26,7 +26,7 @@ fn bindgen_test_layout_Empty() {
 }
 /// This should not get an `_address` byte, since each `Empty` gets one, meaning
 /// that this object is addressable.
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct HasArrayOfEmpty {
     pub empties: [Empty; 10usize],

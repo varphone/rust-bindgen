@@ -55,7 +55,7 @@ pub struct pixel {
     pub __bindgen_anon_1: __BindgenUnionField<pixel__bindgen_ty_1>,
     pub bindgen_union_field: u32,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Hash, PartialEq, Eq)]
 pub struct pixel__bindgen_ty_1 {
     pub r: ::std::os::raw::c_uchar,

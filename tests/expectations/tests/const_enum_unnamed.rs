@@ -13,7 +13,7 @@ pub enum _bindgen_ty_1 {
     FOO_BAR = 0,
     FOO_BAZ = 1,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct Foo {
     pub _address: u8,

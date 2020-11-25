@@ -5,7 +5,7 @@
     non_upper_case_globals
 )]
 
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct NoPartialEq {
     pub _address: u8,
@@ -23,7 +23,7 @@ fn bindgen_test_layout_NoPartialEq() {
         concat!("Alignment of ", stringify!(NoPartialEq))
     );
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct WhitelistMe {
     pub a: NoPartialEq,

@@ -8,7 +8,7 @@
 pub type Char = ::std::os::raw::c_char;
 pub type SChar = ::std::os::raw::c_schar;
 pub type UChar = ::std::os::raw::c_uchar;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct Test {
     pub ch: ::std::os::raw::c_char,

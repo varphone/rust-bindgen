@@ -24,7 +24,7 @@ impl Default for JS_Base {
         unsafe { ::std::mem::zeroed() }
     }
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Copy, Clone)]
 pub struct JS_AutoIdVector {
     pub _base: JS_Base,

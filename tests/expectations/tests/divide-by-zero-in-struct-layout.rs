@@ -99,6 +99,31 @@ pub struct WithBitfield {
     pub __bindgen_padding_0: u32,
     pub a: ::std::os::raw::c_uint,
 }
+#[test]
+fn bindgen_test_layout_WithBitfield() {
+    assert_eq!(
+        ::std::mem::size_of::<WithBitfield>(),
+        8usize,
+        concat!("Size of: ", stringify!(WithBitfield))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<WithBitfield>(),
+        4usize,
+        concat!("Alignment of ", stringify!(WithBitfield))
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<WithBitfield>())).a as *const _ as usize
+        },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(WithBitfield),
+            "::",
+            stringify!(a)
+        )
+    );
+}
 impl WithBitfield {
     #[inline]
     pub fn new_bitfield_1() -> __BindgenBitfieldUnit<[u8; 0usize], u8> {
@@ -115,6 +140,32 @@ pub struct WithBitfieldAndAttrPacked {
     pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize], u8>,
     pub a: ::std::os::raw::c_uint,
 }
+#[test]
+fn bindgen_test_layout_WithBitfieldAndAttrPacked() {
+    assert_eq!(
+        ::std::mem::size_of::<WithBitfieldAndAttrPacked>(),
+        5usize,
+        concat!("Size of: ", stringify!(WithBitfieldAndAttrPacked))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<WithBitfieldAndAttrPacked>(),
+        1usize,
+        concat!("Alignment of ", stringify!(WithBitfieldAndAttrPacked))
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<WithBitfieldAndAttrPacked>())).a as *const _
+                as usize
+        },
+        1usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(WithBitfieldAndAttrPacked),
+            "::",
+            stringify!(a)
+        )
+    );
+}
 impl WithBitfieldAndAttrPacked {
     #[inline]
     pub fn new_bitfield_1() -> __BindgenBitfieldUnit<[u8; 1usize], u8> {
@@ -128,15 +179,40 @@ impl WithBitfieldAndAttrPacked {
 #[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct WithBitfieldAndPacked {
-    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 0usize], u8>,
+    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize], u8>,
     pub a: ::std::os::raw::c_uint,
-    pub __bindgen_padding_0: u8,
+}
+#[test]
+fn bindgen_test_layout_WithBitfieldAndPacked() {
+    assert_eq!(
+        ::std::mem::size_of::<WithBitfieldAndPacked>(),
+        5usize,
+        concat!("Size of: ", stringify!(WithBitfieldAndPacked))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<WithBitfieldAndPacked>(),
+        1usize,
+        concat!("Alignment of ", stringify!(WithBitfieldAndPacked))
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<WithBitfieldAndPacked>())).a as *const _
+                as usize
+        },
+        1usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(WithBitfieldAndPacked),
+            "::",
+            stringify!(a)
+        )
+    );
 }
 impl WithBitfieldAndPacked {
     #[inline]
-    pub fn new_bitfield_1() -> __BindgenBitfieldUnit<[u8; 0usize], u8> {
+    pub fn new_bitfield_1() -> __BindgenBitfieldUnit<[u8; 1usize], u8> {
         let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<
-            [u8; 0usize],
+            [u8; 1usize],
             u8,
         > = Default::default();
         __bindgen_bitfield_unit

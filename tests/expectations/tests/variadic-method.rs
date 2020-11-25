@@ -9,7 +9,7 @@ extern "C" {
     #[link_name = "\u{1}_Z3fooPKcz"]
     pub fn foo(fmt: *const ::std::os::raw::c_char, ...);
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct Bar {
     pub _address: u8,

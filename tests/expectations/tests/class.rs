@@ -405,7 +405,7 @@ impl Default for WithUnion {
         unsafe { ::std::mem::zeroed() }
     }
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone, Hash, PartialOrd, Ord, PartialEq, Eq)]
 pub struct RealAbstractionWithTonsOfMethods {
     pub _address: u8,

@@ -19,7 +19,7 @@ pub mod root {
         }
         pub type Maybe_ValueType<T> = T;
     }
-    #[repr(C)]
+    #[repr(C, packed)]
     #[derive(Debug, Default, Copy, Clone)]
     pub struct CapturingContentInfo {
         pub a: u8,

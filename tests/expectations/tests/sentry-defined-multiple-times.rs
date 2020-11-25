@@ -22,7 +22,7 @@ pub mod root {
         pub struct Wrapper_sentry {
             pub i_am_wrapper_sentry: ::std::os::raw::c_int,
         }
-        #[repr(C)]
+        #[repr(C, packed)]
         #[derive(Debug, Default, Copy, Clone)]
         pub struct sentry {
             pub i_am_plain_sentry: bool,
@@ -53,7 +53,7 @@ pub mod root {
                 )
             );
         }
-        #[repr(C)]
+        #[repr(C, packed)]
         #[derive(Debug, Default, Copy, Clone)]
         pub struct NotTemplateWrapper {
             pub _address: u8,
@@ -71,7 +71,7 @@ pub mod root {
                 concat!("Alignment of ", stringify!(NotTemplateWrapper))
             );
         }
-        #[repr(C)]
+        #[repr(C, packed)]
         #[derive(Debug, Default, Copy, Clone)]
         pub struct NotTemplateWrapper_sentry {
             pub i_am_not_template_wrapper_sentry: ::std::os::raw::c_char,
@@ -103,12 +103,12 @@ pub mod root {
                 )
             );
         }
-        #[repr(C)]
+        #[repr(C, packed)]
         #[derive(Debug, Default, Copy, Clone)]
         pub struct InlineNotTemplateWrapper {
             pub _address: u8,
         }
-        #[repr(C)]
+        #[repr(C, packed)]
         #[derive(Debug, Default, Copy, Clone)]
         pub struct InlineNotTemplateWrapper_sentry {
             pub i_am_inline_not_template_wrapper_sentry: bool,
@@ -169,12 +169,12 @@ pub mod root {
         pub struct InlineTemplateWrapper_sentry {
             pub i_am_inline_template_wrapper_sentry: ::std::os::raw::c_int,
         }
-        #[repr(C)]
+        #[repr(C, packed)]
         #[derive(Debug, Default, Copy, Clone)]
         pub struct OuterDoubleWrapper {
             pub _address: u8,
         }
-        #[repr(C)]
+        #[repr(C, packed)]
         #[derive(Debug, Default, Copy, Clone)]
         pub struct OuterDoubleWrapper_InnerDoubleWrapper {
             pub _address: u8,
@@ -255,12 +255,12 @@ pub mod root {
                 )
             );
         }
-        #[repr(C)]
+        #[repr(C, packed)]
         #[derive(Debug, Default, Copy, Clone)]
         pub struct OuterDoubleInlineWrapper {
             pub _address: u8,
         }
-        #[repr(C)]
+        #[repr(C, packed)]
         #[derive(Debug, Default, Copy, Clone)]
         pub struct OuterDoubleInlineWrapper_InnerDoubleInlineWrapper {
             pub _address: u8,

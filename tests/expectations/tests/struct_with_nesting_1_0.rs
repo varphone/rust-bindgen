@@ -112,7 +112,7 @@ impl Clone for foo__bindgen_ty_1__bindgen_ty_1 {
         *self
     }
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Hash, PartialEq, Eq)]
 pub struct foo__bindgen_ty_1__bindgen_ty_2 {
     pub d1: ::std::os::raw::c_uchar,

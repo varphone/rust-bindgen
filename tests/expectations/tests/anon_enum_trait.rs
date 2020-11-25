@@ -29,7 +29,7 @@ pub const DataType_type_: DataType__bindgen_ty_1 =
 pub enum DataType__bindgen_ty_1 {
     generic_type = 0,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct Foo {
     pub _address: u8,

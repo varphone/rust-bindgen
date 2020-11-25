@@ -28,7 +28,7 @@ fn bindgen_test_layout_Doggo() {
         concat!("Offset of field: ", stringify!(Doggo), "::", stringify!(x))
     );
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone, Hash, PartialEq)]
 pub struct Null {
     pub _address: u8,

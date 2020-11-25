@@ -64,7 +64,7 @@ fn bindgen_test_layout_foo__bindgen_ty_1__bindgen_ty_1() {
         )
     );
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct foo__bindgen_ty_1__bindgen_ty_2 {
     pub d1: ::std::os::raw::c_uchar,

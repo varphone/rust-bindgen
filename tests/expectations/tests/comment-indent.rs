@@ -12,7 +12,7 @@ pub mod root {
     /// This is a multi-line doc comment.
     ///
     /// This class is really really interesting, look!
-    #[repr(C)]
+    #[repr(C, packed)]
     #[derive(Debug, Default, Copy, Clone)]
     pub struct Foo {
         pub _address: u8,
@@ -20,7 +20,7 @@ pub mod root {
     /// This nested class is also a multi-line doc comment.
     ///
     /// This class is not so interesting, but worth a bit of docs too!
-    #[repr(C)]
+    #[repr(C, packed)]
     #[derive(Debug, Default, Copy, Clone)]
     pub struct Foo_Bar {
         pub _address: u8,
@@ -96,7 +96,7 @@ pub mod root {
         /// I'm in an inline namespace, and as such I shouldn't get generated inside
         /// a rust module, except when the relevant option is specified. Also, this
         /// comment shouldn't be misaligned.
-        #[repr(C)]
+        #[repr(C, packed)]
         #[derive(Debug, Default, Copy, Clone)]
         pub struct InInlineNS {
             pub _address: u8,
@@ -114,7 +114,7 @@ pub mod root {
                 concat!("Alignment of ", stringify!(InInlineNS))
             );
         }
-        #[repr(C)]
+        #[repr(C, packed)]
         #[derive(Debug, Default, Copy, Clone)]
         pub struct Bazz {
             pub _address: u8,

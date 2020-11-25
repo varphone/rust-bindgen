@@ -10,7 +10,7 @@
 pub struct Base {
     pub _address: u8,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct Derived {
     pub _address: u8,
@@ -33,7 +33,7 @@ fn bindgen_test_layout_Derived() {
 pub struct BaseWithDestructor {
     pub _address: u8,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default)]
 pub struct DerivedFromBaseWithDestructor {
     pub _address: u8,

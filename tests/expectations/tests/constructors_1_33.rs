@@ -5,7 +5,7 @@
     non_upper_case_globals
 )]
 
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct TestOverload {
     pub _address: u8,
@@ -50,7 +50,7 @@ impl TestOverload {
         __bindgen_tmp
     }
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct TestPublicNoArgs {
     pub _address: u8,

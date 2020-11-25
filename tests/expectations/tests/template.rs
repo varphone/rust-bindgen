@@ -437,7 +437,7 @@ impl<T> Default for Incomplete<T> {
         unsafe { ::std::mem::zeroed() }
     }
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct Untemplated {
     pub _address: u8,

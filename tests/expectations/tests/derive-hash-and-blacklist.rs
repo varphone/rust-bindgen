@@ -8,7 +8,7 @@
 pub struct BlacklistMe(u8);
 
 /// Because this type contains a blacklisted type, it should not derive Hash.
-#[repr(C)]
+#[repr(C, packed)]
 pub struct ShouldNotDeriveHash {
     pub a: BlacklistMe,
 }

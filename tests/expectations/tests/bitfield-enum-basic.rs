@@ -118,7 +118,7 @@ impl ::std::ops::BitAndAssign for _bindgen_ty_1 {
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct _bindgen_ty_1(pub ::std::os::raw::c_uint);
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct Dummy {
     pub _address: u8,

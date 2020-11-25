@@ -12,7 +12,7 @@ pub union pixel {
     pub __bindgen_anon_1: pixel__bindgen_ty_1,
     _bindgen_union_align: u32,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct pixel__bindgen_ty_1 {
     pub r: ::std::os::raw::c_uchar,

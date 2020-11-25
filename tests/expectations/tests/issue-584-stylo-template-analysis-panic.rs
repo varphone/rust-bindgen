@@ -7,7 +7,7 @@
 
 pub type RefPtr<T> = T;
 
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct A {
     pub _address: u8,
@@ -41,7 +41,7 @@ impl<c> Default for e<c> {
 pub struct f {
     pub _address: u8,
 }
-#[repr(C)]
+#[repr(C, packed)]
 pub struct g {
     pub h: f,
 }
@@ -68,7 +68,7 @@ impl Default for g {
         unsafe { ::std::mem::zeroed() }
     }
 }
-#[repr(C)]
+#[repr(C, packed)]
 pub struct b {
     pub _base: g,
 }

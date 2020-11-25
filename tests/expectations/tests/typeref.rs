@@ -5,7 +5,7 @@
     non_upper_case_globals
 )]
 
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct mozilla_FragmentOrURL {
     pub mIsLocalRef: bool,
@@ -36,7 +36,7 @@ fn bindgen_test_layout_mozilla_FragmentOrURL() {
         )
     );
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct mozilla_Position {
     pub _address: u8,

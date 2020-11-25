@@ -458,7 +458,7 @@ impl Clone for WithUnion {
         *self
     }
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Hash, PartialEq, Eq)]
 pub struct RealAbstractionWithTonsOfMethods {
     pub _address: u8,

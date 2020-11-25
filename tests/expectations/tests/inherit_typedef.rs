@@ -5,7 +5,7 @@
     non_upper_case_globals
 )]
 
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct Foo {
     pub _address: u8,
@@ -24,7 +24,7 @@ fn bindgen_test_layout_Foo() {
     );
 }
 pub type TypedefedFoo = Foo;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct Bar {
     pub _address: u8,

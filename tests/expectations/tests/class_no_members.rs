@@ -5,7 +5,7 @@
     non_upper_case_globals
 )]
 
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct whatever {
     pub _address: u8,
@@ -23,7 +23,7 @@ fn bindgen_test_layout_whatever() {
         concat!("Alignment of ", stringify!(whatever))
     );
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct whatever_child {
     pub _address: u8,

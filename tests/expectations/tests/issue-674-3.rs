@@ -15,7 +15,7 @@ pub mod root {
         pub _address: u8,
     }
     pub type nsRefPtrHashtable_UserDataType<PtrType> = *mut PtrType;
-    #[repr(C)]
+    #[repr(C, packed)]
     #[derive(Debug, Default, Copy, Clone)]
     pub struct a {
         pub b: u8,
@@ -38,7 +38,7 @@ pub mod root {
             concat!("Offset of field: ", stringify!(a), "::", stringify!(b))
         );
     }
-    #[repr(C)]
+    #[repr(C, packed)]
     #[derive(Debug, Default, Copy, Clone)]
     pub struct nsCSSValue {
         pub c: root::a,

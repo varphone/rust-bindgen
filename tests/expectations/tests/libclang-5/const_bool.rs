@@ -6,7 +6,7 @@
 )]
 
 pub const k: bool = true;
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct A {
     pub _address: u8,

@@ -45,7 +45,7 @@ impl Bar {
         __bindgen_tmp.assume_init()
     }
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone)]
 pub struct Baz {
     pub _address: u8,

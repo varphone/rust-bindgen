@@ -5,7 +5,7 @@
     non_upper_case_globals
 )]
 
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct Pupper {
     pub _address: u8,
@@ -23,7 +23,7 @@ fn bindgen_test_layout_Pupper() {
         concat!("Alignment of ", stringify!(Pupper))
     );
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct Doggo {
     pub _address: u8,
@@ -41,7 +41,7 @@ fn bindgen_test_layout_Doggo() {
         concat!("Alignment of ", stringify!(Doggo))
     );
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct SuchWow {
     pub _address: u8,
@@ -102,7 +102,7 @@ extern "C" {
     #[link_name = "\u{1}_ZN6Opaque11MAJESTIC_AFE"]
     pub static mut Opaque_MAJESTIC_AF: Doggo;
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Debug, Default, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct Whitelisted {
     pub some_member: Opaque,

@@ -33,12 +33,12 @@ impl Default for Bar {
         unsafe { ::std::mem::zeroed() }
     }
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy, Clone)]
 pub struct c {
     pub __bindgen_anon_1: c__bindgen_ty_1,
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy, Clone)]
 pub union c__bindgen_ty_1 {
     _bindgen_union_align: u8,
@@ -80,7 +80,7 @@ impl Default for c {
         unsafe { ::std::mem::zeroed() }
     }
 }
-#[repr(C)]
+#[repr(C, packed)]
 #[derive(Copy, Clone)]
 pub struct a {
     pub d: c,

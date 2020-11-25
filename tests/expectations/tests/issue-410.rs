@@ -12,7 +12,7 @@ pub mod root {
     pub mod JS {
         #[allow(unused_imports)]
         use self::super::super::root;
-        #[repr(C)]
+        #[repr(C, packed)]
         #[derive(Debug, Default, Copy, Clone)]
         pub struct Value {
             pub _address: u8,
